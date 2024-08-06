@@ -1,0 +1,51 @@
+:root {
+  --bg-color: #ecf2f8;
+  --purple: #733fc8;
+  --white: #fff;
+  --black: #000;
+  --dark-blue: #19202d;
+}
+body {
+  background-color: var(--bg-color);
+}
+.card {
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+}
+.item1 {
+  grid-area: purpleBox;
+  background-color: var(--purple);
+}
+.item2 {
+  grid-area: greyBox;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+.item3 {
+  grid-area: whiteBox;
+  color: var(--black);
+  background-color: var(--white);
+}
+.item4 {
+  grid-area: smallBox;
+  color: var(--black);
+  background-color: var(--white);
+}
+.item5 {
+  grid-area: darkBox;
+  background-color: var(--dark-blue);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "purpleBox purpleBox greyBox whiteBox"
+    "smallBox darkBox darkBox whiteBox";
+  gap: 16px;
+}
+.container-wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
